@@ -3,11 +3,11 @@ A collection of various javascript plugins, functions, and whatnot, that do not 
 
 ## Table of Contents
 
-- (htmlEngine)[]
-- (zipUrls)[]
-- (getBase64)[]
+- [htmlEngine](#htmlEngine)
+- [zipUrls](#zipUrls)
+- [getBase64](#getBase64)
 
-### htmlEngine
+## htmlEngine
 
 This is a simple HTML view engine for Express to be used where EJS or Jade or another such engine is overkill. To get started, download and include the `htmlEngine.js` file in your server.js file:
 
@@ -16,7 +16,7 @@ app.engine("html", require("./plugins/htmlEngine"));
 app.set("view engine", "html");
 ```
 
-### zipUrls
+## zipUrls
 
 This is a utility that downloads files from a given array of URLs, and streams those files into a zip file. A CSV file is also streamed into that zip file. To use this plugin, first download the `zipURLs.js` file, then include it in your project:
 
@@ -45,11 +45,11 @@ res.status(200);
 zipFile.pipe(res);
 ```
 
-### getBase64
+## getBase64
 
-This function converts an image file to Base64 string data. To use, first download and require the `getBase64.js` file:
+This function converts an image file to Base64 string data. To use, first download and require the `getBase64.js` file, then pass in the image file.
 
 ``` javascript
-let getBase64 = ("./plugin/getBase64")
-
+let getBase64 = ("./plugin/getBase64");
+let img64 = getBase64(imageFile);
 ```
