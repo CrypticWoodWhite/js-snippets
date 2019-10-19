@@ -2,3 +2,5 @@ desktop.ini
 .env
 node_modules
 .history
+.vscode
+DS_Store
